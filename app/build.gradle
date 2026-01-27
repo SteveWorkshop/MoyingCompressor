@@ -44,6 +44,8 @@ dependencies {
 
     // Feature module support for Fragments
     implementation libs.androidx.navigation.dynamic.features.fragment
+    implementation libs.androidx.preference
+    implementation libs.androidx.documentfile
 
     // Testing Navigation
     androidTestImplementation libs.navigation.testing

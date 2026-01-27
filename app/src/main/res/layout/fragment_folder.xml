@@ -1,14 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".ui.pages.FolderFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <Button
+        android:id="@+id/btnPickSrc"
+        android:text="1. 选择源文件夹"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"/>
 
-</FrameLayout>
+    <Button
+        android:id="@+id/btnPickDst"
+        android:text="2. 选择目标文件夹"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvSrc"
+        android:text="源：未选择"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvDst"
+        android:text="目标：未选择"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RadioGroup
+        android:id="@+id/rgMode"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/rbShort"
+            android:text="短边"
+            android:checked="true"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rbLong"
+            android:text="长边"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+        <RadioButton
+            android:id="@+id/rbFixed"
+            android:text="固定"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"/>
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/etSize"
+        android:hint="1080"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/etDpi"
+        android:hint="DPI（如 300）"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <EditText
+        android:id="@+id/etQuality"
+        android:hint="质量 1-100"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/btnStart"
+        android:text="开始压缩"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:visibility="gone"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/tvLog"
+        android:text="日志："
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+</LinearLayout>

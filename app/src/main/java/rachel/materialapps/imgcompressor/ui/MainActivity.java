@@ -12,6 +12,8 @@ import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import com.google.android.material.navigation.NavigationBarView;
+
 import rachel.materialapps.imgcompressor.R;
 import rachel.materialapps.imgcompressor.databinding.ActivityMainBinding;
 import lombok.Getter;
@@ -49,5 +51,25 @@ public class MainActivity extends AppCompatActivity {
         mViewModel = new ViewModelProvider(this, new SavedStateViewModelFactory(getApplication(), this)).get(MainViewModel.class);
         navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.my_nav_host_fragment);
         navController = navHostFragment.getNavController();
+        binding.navigationRail.setOnItemSelectedListener(item->{
+            switch (item.getItemId()){
+                case R.id.folder_window:{
+                    navController.navigate(R.id.folderFragment);
+                    break;
+                }
+                case R.id.camera_window:{
+                    navController.navigate(R.id.cameraFragment);
+                    break;
+                }
+                case R.id.settings_window:{
+                    navController.navigate(R.id.settingsFragment);
+                    break;
+                }
+                default:{
+                    break;
+                }
+            }
+            return true;
+        });
     }
 }

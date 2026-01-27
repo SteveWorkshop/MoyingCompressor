@@ -5,8 +5,8 @@ import android.app.Application;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 
-public class FolderViewModel extends AndroidViewModel {
-    public FolderViewModel(@NonNull Application application) {
+public class CameraViewModel extends AndroidViewModel {
+    public CameraViewModel(@NonNull Application application) {
         super(application);
     }
 }
