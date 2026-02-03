@@ -4,7 +4,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".ui.pages.FolderFragment">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="文件压缩"
+        android:textSize="33dp"
+        android:padding="5dp"
+        />
     <Button
         android:id="@+id/btnPickSrc"
         android:text="1. 选择源文件夹"
@@ -52,14 +60,28 @@
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"/>
     </RadioGroup>
+    <!-- 放在 quality 输入框下方即可 -->
+    <TextView
+        android:text="快捷预设："
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
+    <Spinner
+        android:id="@+id/spinnerPreset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <EditText
         android:id="@+id/etSize"
         android:hint="1080"
         android:inputType="number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
+    <EditText
+        android:id="@+id/etHeight"
+        android:hint="高度（尽在固定模式下需要填写）"
+        android:inputType="number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
     <EditText
         android:id="@+id/etDpi"
         android:hint="DPI（如 300）"
